@@ -3,59 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NoirEva is opening the gate...</title>
+  <title>NoirEva™ — She Moves Beneath Sound</title>
+  <meta name="description" content="A whispered ritual brand built on voice, mystery, and digital devotion. NoirEva™ opens the gate to intimate transformation. You didn’t find this by accident." />
+  <meta name="keywords" content="whisper hypnosis, erotic ritual, NoirEva, voice dominatrix, whispered audio, feminine power, digital seduction" />
+  <meta name="author" content="NoirEva™" />
+  <meta property="og:title" content="NoirEva™ — She Moves Beneath Sound" />
+  <meta property="og:description" content="You didn’t find this by accident. She moves beneath sound. Enter the voice ceremony..." />
+  <meta property="og:image" content="https://noireva.online/gate.webp" />
+  <meta property="og:url" content="https://noireva.online/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="https://noireva.online/gate.webp" type="image/webp" />
 
-  <!-- SEO -->
-  <meta name="description" content="Enter the whispered portal of NoirEva™. A hypnotic voice. A ritual. A pull you can't resist.">
-  <meta name="keywords" content="NoirEva, voice ritual, whisper hypnosis, dark feminine, sound ceremony">
-  <meta name="author" content="NoirEva™">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="She moves beneath sound…">
-  <meta property="og:description" content="NoirEva is opening the gate… Listen closely. Forget the way back.">
-  <meta property="og:image" content="https://noireva.github.io/noireva-landing/gate.webp">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://whop.com/noireva">
-
-  <!-- Styles -->
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      background: url('gate.webp') no-repeat center center fixed;
-      background-size: cover;
+      background: black;
+      overflow: hidden;
+      height: 100vh;
+      color: #f5f5f5;
       font-family: 'Georgia', serif;
-      color: #fff;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.65);
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .content {
+      z-index: 2;
       text-align: center;
+      animation: fadeIn 2.5s ease-out;
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 0.3em;
-      text-shadow: 0 0 20px black;
+      font-size: 2rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
     }
 
     p {
-      font-size: 1.5em;
-      text-shadow: 0 0 10px black;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .bg {
+      background: url("gate.webp") no-repeat center center fixed;
+      background-size: cover;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
     }
   </style>
 
-  <!-- Redirect in 3 seconds -->
   <script>
-    setTimeout(function() {
+    setTimeout(() => {
       window.location.href = "https://whop.com/noireva";
-    }, 3000);
+    }, 3500); // Auto-redirect in 3.5 seconds
   </script>
 </head>
-
 <body>
-  <h1>She moves beneath sound…</h1>
-  <p>NoirEva is opening the gate.</p>
+  <div class="bg"></div>
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>NoirEva™ is opening the gate...</h1>
+    <p>She moves beneath sound. <br> Enter slowly. Listen fully. <br> Forget the way back.</p>
+  </div>
 </body>
 </html>
